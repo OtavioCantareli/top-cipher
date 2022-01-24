@@ -14,4 +14,4 @@ def cipher(str, shift)
   result_string
 end
 
-cipher('AbC xYz 123', -1)
+p cipher('AbC xYz 123', -1)
