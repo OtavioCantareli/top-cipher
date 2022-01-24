@@ -5,11 +5,13 @@ def cipher(str, shift)
                        (((char.ord - 65 + shift) % 26) + 65).chr
                      elsif char.ord.between?(97, 122)
                        (((char.ord - 97 + shift) % 26) + 97).chr
+                     elsif char.ord.between?(48, 57)
+                       (((char.ord - 48 + shift) % 26) + 48).chr
                      else
                        char
                      end
   end
-  p result_string
+  result_string
 end
 
-cipher('AbC xYz 123', 1)
+cipher('AbC xYz 123', -1)
